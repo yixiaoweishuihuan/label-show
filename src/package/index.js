@@ -1,8 +1,7 @@
+import Label from './views/label.vue'
 import Vue from 'vue'
-import Label from './package/views/label.vue'
 
-Label.install = function (vue) {
-  console.log('vue: ', vue)
+const install = function (vue) {
   vue.component(Label.name, Label)
 }
 
@@ -13,4 +12,4 @@ if (typeof window !== undefined) {
   }
 }
 
-export default Label
+export default { install, Label }
